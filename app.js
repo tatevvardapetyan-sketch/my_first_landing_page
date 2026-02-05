@@ -51,3 +51,34 @@ modal.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
 });
+const form = document.getElementById("cta-form");
+const errorEl = document.getElementById("form-error");
+
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  errorEl.textContent = "";
+
+  const name = form.elements["name"].value.trim();
+  const email = form.elements["email"].value.trim();
+
+  if (!name) {
+    errorEl.textContent = "Please enter your name.";
+    return;
+  }
+  if (!email || !isValidEmail(email)) {
+    errorEl.textContent = "Please enter a valid email address.";
+    return;
+  }
+
+  // fake success
+  errorEl.style.color = "var(--accent2)";
+  errorEl.textContent = "Success! We’ll be in touch soon.";
+  form.reset();
+
+  setTimeout(() => {
+    errorEl.style.color = "";
+    closeModal();
+  }, 900);
+});
