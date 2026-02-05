@@ -10,13 +10,13 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="#top">PulseBoard</a>
-       <nav class="nav" id="navbar">
-  <a href="#showcase" data-section="showcase">Showcase</a>
-  <a href="#benefits" data-section="benefits">Benefits</a>
-  <a href="#testimonials" data-section="testimonials">Testimonials</a>
-  <a href="#pricing" data-section="pricing">Pricing</a>
-</nav>
-<button class="btn btn-primary" id="open-cta" type="button">Get Started</button>
+        <nav class="nav">
+          <a href="#showcase">Showcase</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <a class="btn btn-primary" href="#pricing">Get Started</a>
       </div>
     </header>
 
@@ -194,4 +194,41 @@
     <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-links">
-          <a href="#">Twitter
+          <a href="#">Twitter</a>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <div>© <span id="year"></span> PulseBoard. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <!-- CTA MODAL -->
+<div class="modal" id="cta-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="true"></div>
+
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close modal" data-close="true">×</button>
+
+    <h3 id="modal-title">Get Started</h3>
+    <p class="modal-sub">Drop your details and we’ll send setup info.</p>
+
+    <form id="cta-form" novalidate>
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <p class="form-error" id="form-error" aria-live="polite"></p>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+  </body>
+</html>

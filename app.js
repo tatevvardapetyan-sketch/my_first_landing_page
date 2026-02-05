@@ -22,3 +22,32 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((s) => observer.observe(s));
+// Modal behaviors
+const modal = document.getElementById("cta-modal");
+const openBtn = document.getElementById("open-cta");
+
+const openModal = () => {
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  const firstInput = modal.querySelector("input");
+  firstInput?.focus();
+};
+
+const closeModal = () => {
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  openBtn?.focus();
+};
+
+openBtn?.addEventListener("click", openModal);
+
+modal.addEventListener("click", (e) => {
+  const target = e.target;
+  if (target?.dataset?.close === "true") closeModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+});
