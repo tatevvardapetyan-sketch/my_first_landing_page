@@ -233,7 +233,32 @@
       </section>
     </main>
 
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-close="true"></div>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true">
+        <button class="lightbox-close" type="button" data-close="true" aria-label="Close">×</button>
+        <button class="lightbox-nav prev" type="button" id="lb-prev" aria-label="Previous">‹</button>
+        <img id="lb-img" alt="Preview" />
+        <button class="lightbox-nav next" type="button" id="lb-next" aria-label="Next">›</button>
+      </div>
+    </div>
+    </main>
+
     <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-links">
-          <a href="#">Twitter
+          <a href="#">Twitter</a>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="year"></span> PulseBoard. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+ 
+
+
