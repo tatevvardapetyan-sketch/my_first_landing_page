@@ -255,6 +255,7 @@ input {
 .thumb img { width: 100%; display: block; }
 .thumb span { display: block; padding: 10px 12px; color: var(--muted); }
 
+
 @media (max-width: 900px) {
   .gallery { grid-template-columns: 1fr;}
   .hero-grid { grid-template-columns: 1fr; }

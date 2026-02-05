@@ -253,6 +253,7 @@
           <a href="#">LinkedIn</a>
         </div>
         <p>&copy; <span id="year"></span> PulseBoard. All rights reserved.</p>
+        <div>© <span id="year"></span> PulseBoard. All rights reserved.</div>
       </div>
     </footer>
 
@@ -262,3 +263,32 @@
  
 
 
+    <!-- CTA MODAL -->
+<div class="modal" id="cta-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="true"></div>
+
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close modal" data-close="true">×</button>
+
+    <h3 id="modal-title">Get Started</h3>
+    <p class="modal-sub">Drop your details and we’ll send setup info.</p>
+
+    <form id="cta-form" novalidate>
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <p class="form-error" id="form-error" aria-live="polite"></p>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+  </body>
+</html>
